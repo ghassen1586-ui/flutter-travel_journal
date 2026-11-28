@@ -3,6 +3,7 @@ import 'package:provider/provider.dart';
 
 import 'providers/destinations_provider.dart';
 import 'providers/favorites_provider.dart';
+import 'providers/weather_provider.dart';
 import 'screens/explore_screen.dart';
 
 void main() {
@@ -11,6 +12,7 @@ void main() {
       providers: [
         ChangeNotifierProvider(create: (_) => FavoritesProvider()),
         ChangeNotifierProvider(create: (_) => DestinationsProvider()..load()),
+        ChangeNotifierProvider(create: (_) => WeatherProvider()),
       ],
       child: const TravelJournalApp(),
     ),
